@@ -6,3 +6,8 @@ allow platform_app privapp_data_file:file { execute };
 # LockScreen Charging
 allow platform_app sysfs_battery_supply:dir { search };
 allow platform_app sysfs_battery_supply:file { getattr open read };
+
+# FPS toggle
+type sysfs_graphics, sysfs_type, fs_type;
+allow platform_app rs_exec:file { execute execute_no_trans r_file_perms };
+allow platform_app sysfs_graphics:file { getattr open read };
