@@ -2,3 +2,7 @@
 allow platform_app app_data_file:file { execute };
 allow platform_app vendor_asus_prop:file { getattr map open read };
 allow platform_app privapp_data_file:file { execute };
+
+# LockScreen Charging
+allow platform_app sysfs_battery_supply:dir { search };
+allow platform_app sysfs_battery_supply:file { getattr open read };
