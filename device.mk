@@ -182,6 +182,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
