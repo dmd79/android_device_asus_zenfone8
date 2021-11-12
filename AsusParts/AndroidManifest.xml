@@ -56,8 +56,8 @@
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
             <meta-data
-                android:name="com.android.settings.bg.hint"
-                android:resource="@color/homepage_asusparts_background" />
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_asusparts" />
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.homepage" />
