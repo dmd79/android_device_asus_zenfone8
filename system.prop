@@ -266,5 +266,8 @@ persist.dbg.wfc_avail_ovr=1
 # Display
 ro.surface_flinger.refresh_rate_switching=true
 
+# Graphics
+debug.cpurend.vsync=false
+
 # Pre-rendering
 ro.vendor.perf.scroll_opt=true
