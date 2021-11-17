@@ -245,3 +245,8 @@ vendor.camera.eis_ois.sup_list=8K@24,4K@60,4K@30,FHD@60,FHD@30,HD@60,HD@30
 ro.vendor.qti.va_aosp.support=1
 persist.google.assistant.enable=1
 sys.vendor.qti.servicetracker.disable=true
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
