@@ -30,10 +30,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    vendor/omni/overlay/CarrierConfig
+ DEVICE_PACKAGE_OVERLAYS += \
+     $(LOCAL_PATH)/overlay
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -44,7 +42,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/omnipreopt_script \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
@@ -55,7 +53,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_vendor=true
 
 PRODUCT_PACKAGES += \
-    omnipreopt_script
+    otapreopt_script
 
 # tell update_engine to not change dynamic partition table during updates
 # needed since our qti_dynamic_partitions does not include
@@ -93,16 +91,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-
-# Charger images
-PRODUCT_PACKAGES += \
-    omni_charger_res_images \
-    animation.txt \
-    font_charger.png
-
-# DeviceParts
-PRODUCT_PACKAGES += \
-    DeviceParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -206,7 +194,11 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    telephony-ext \
     tcmiface
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -237,4 +229,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-include vendor/qcom/opensource/display-commonsys-intf/config/display-product-system.mk
