@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.android.settings">
+        <permission name="android.permission.RESET_BATTERY_STATS"/>
+        <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
+        <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.systemui">
+        <permission name="android.permission.FORCE_STOP_PACKAGES"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.RECOVERY"/>
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
+        <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
+    </privapp-permissions>
+
+</permissions>

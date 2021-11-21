@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     libandroid_net
 
+# Prebuilt
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system_ext/etc/permissions/privapp-permissions-AEX.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-AEX.xml
+
 PRODUCT_PACKAGES += \
     vndk_package
 
