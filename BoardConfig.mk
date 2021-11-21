@@ -23,6 +23,8 @@ IMAGES_PATH := vendor/images/asus/zenfone8
 
 BOARD_VENDOR := asus
 
+BUILD_BROKEN_DUP_RULES := true
+
 # A/B
 AB_OTA_UPDATER := true
 
