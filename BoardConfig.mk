@@ -136,8 +136,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1
 
 # Use Gnu AS until we can switch to LLVM_IAS=1
-KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gas/$(HOST_PREBUILT_TAG)
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+# KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gas/$(HOST_PREBUILT_TAG)
+# TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 
 # NFC
 TARGET_USES_NQ_NFC := true
