@@ -89,11 +89,20 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Display
 PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
+    libgralloc.qti \
     libion \
-    libtinyxml2
+    libqdMetaData \
+    libtinyxml2 \
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0
 
 PRODUCT_PACKAGES += \
     libtinyalsa
+
+# DRM
+PRODUCT_PACKAGES += \
+    libdrm
 
 # fastbootd
 PRODUCT_PACKAGES += \
