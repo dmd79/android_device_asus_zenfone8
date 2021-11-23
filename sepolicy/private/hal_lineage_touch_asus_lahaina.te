@@ -1,0 +1,7 @@
+type hal_lineage_touch_asus_lahaina, domain, coredomain;
+hal_server_domain(hal_lineage_touch_asus_lahaina, hal_lineage_touch)
+
+type hal_lineage_touch_asus_lahaina_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_lineage_touch_asus_lahaina)
+
+allow hal_lineage_touch_asus_lahaina proc_touchscreen:file rw_file_perms;

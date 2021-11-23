@@ -14,5 +14,12 @@
 # HALs
 /system_ext/bin/hw/omni\.biometrics\.fingerprint\.inscreen@1\.0-service\.asus_lahaina	u:object_r:hal_fod_asus_lahaina_exec:s0
 
+# Gestures
+/proc/driver/glove                            u:object_r:sysfs_gesture:s0
+/proc/driver/swipeup                            u:object_r:sysfs_gesture:s0
+
+# HAL
+/system/bin/hw/lineage\.touch@1\.0-service\.asus_lahaina	u:object_r:hal_lineage_touch_asus_lahaina_exec:s0
+
 # Health
 /(product|system/product)/vendor_overlay/[0-9]+/lib64/hw/android\.hardware\.health@2\.0-impl-2\.1-qti\.so	u:object_r:vendor_file:s0
