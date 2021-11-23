@@ -210,6 +210,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private \
                                    $(DEVICE_PATH)/sepolicy/qva/private
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/product/private
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
 
 # Treble
 BOARD_VNDK_VERSION := current
