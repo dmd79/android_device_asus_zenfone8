@@ -64,3 +64,6 @@ PLATFORM_SECURITY_PATCH_OVERRIDE := 2021-10-05
 
 # GApps
 WITH_CORE_GAPPS := true
+
+# Signing Keys
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/oss/keys/releasekey
