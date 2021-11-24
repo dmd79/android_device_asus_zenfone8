@@ -1,0 +1,4 @@
+type vendor_firmware_file, vendor_file_type, file_type;
+
+allow surfaceflinger vendor_file:dir { open read };
+allow surfaceflinger vendor_firmware_file:dir { read search };
