@@ -86,6 +86,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/dt2w_control">
+
+        <SwitchPreference
+            android:key="dt2w"
+            android:defaultValue="0"
+            android:icon="@drawable/ic_dt2w"
+            android:title="@string/dt2w_title"
+            android:summary="@string/dt2w_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/swipeup_control">
 
         <SwitchPreference
