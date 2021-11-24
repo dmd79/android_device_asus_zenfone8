@@ -37,10 +37,14 @@ public class AsusParts extends PreferenceFragment implements
     public static final String KEY_GLOVE_SWITCH = "glove";
     public static final String GLOVE_PATH = "/proc/driver/glove";
 
+    public static final String KEY_DT2W_SWITCH = "dt2w";
+    public static final String DT2W_PATH = "/proc/driver/dclick";
+
     public static final String KEY_SWIPEUP_SWITCH = "swipeup";
     public static final String SWIPEUP_PATH = "/proc/driver/swipeup";
 
     private TwoStatePreference mGloveSwitch;
+    private TwoStatePreference mDt2wSwitch;
     private TwoStatePreference mSwipeUpSwitch;
 
     @Override
@@ -60,6 +64,10 @@ public class AsusParts extends PreferenceFragment implements
         mGloveSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
         KEY_GLOVE_SWITCH, 1) != 0);
 
+        mDt2wSwitch = (TwoStatePreference) findPreference(KEY_DT2W_SWITCH);
+        mDt2wSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
+        KEY_DT2W_SWITCH, 1) != 0);
+
         mSwipeUpSwitch = (TwoStatePreference) findPreference(KEY_SWIPEUP_SWITCH);
         mSwipeUpSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
         KEY_SWIPEUP_SWITCH, 1) != 0);
@@ -71,6 +79,11 @@ public class AsusParts extends PreferenceFragment implements
         if (preference == mGloveSwitch) {
             Settings.System.putInt(getContext().getContentResolver(), KEY_GLOVE_SWITCH, mGloveSwitch.isChecked() ? 1 : 0);
             FileUtils.setValue(GLOVE_PATH, mGloveSwitch.isChecked() ? "1" : "0");
+            return true;
+        }
+        if (preference == mDt2wSwitch) {
+            Settings.System.putInt(getContext().getContentResolver(), KEY_DT2W_SWITCH, mDt2wSwitch.isChecked() ? 1 : 0);
+            FileUtils.setValue(DT2W_PATH, mDt2wSwitch.isChecked() ? "1" : "0");
             return true;
         }
         if (preference == mSwipeUpSwitch) {

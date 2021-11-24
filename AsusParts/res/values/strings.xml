@@ -85,6 +85,11 @@
     <string name="glove_title">Enable glove mode</string>
     <string name="glove_summary">High touch sensitivity</string>
 
+    <!-- DT2W -->
+    <string name="dt2w_control">DT2W control</string>
+    <string name="dt2w_title">Enable DT2W gesture</string>
+    <string name="dt2w_summary">Double tap to wake up screen</string>
+
     <!-- Swipe up -->
     <string name="swipeup_control">Swipe up control</string>
     <string name="swipeup_title">Enable swipe up gesture</string>

@@ -41,6 +41,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         FileUtils.setValue(AsusParts.GLOVE_PATH, Settings.System.getInt(context.getContentResolver(),
                 AsusParts.KEY_GLOVE_SWITCH, 1));
         if (DEBUG) Log.d(TAG, "Glove switch = "+(Settings.System.getInt(context.getContentResolver(), AsusParts.KEY_GLOVE_SWITCH, 1))); 
+        FileUtils.setValue(AsusParts.DT2W_PATH, Settings.System.getInt(context.getContentResolver(),
+                AsusParts.KEY_DT2W_SWITCH, 1));
+        if (DEBUG) Log.d(TAG, "DT2W switch = "+(Settings.System.getInt(context.getContentResolver(), AsusParts.KEY_DT2W_SWITCH, 1)));
         FileUtils.setValue(AsusParts.SWIPEUP_PATH, Settings.System.getInt(context.getContentResolver(),
                 AsusParts.KEY_SWIPEUP_SWITCH, 1));
         if (DEBUG) Log.d(TAG, "Swipe up switch = "+(Settings.System.getInt(context.getContentResolver(), AsusParts.KEY_SWIPEUP_SWITCH, 1)));        
