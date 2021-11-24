@@ -87,7 +87,7 @@ public class AsusParts extends PreferenceFragment implements
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mQhdrSwitch) {
             Settings.System.putInt(getContext().getContentResolver(), KEY_QHDR_SWITCH, mQhdrSwitch.isChecked() ? 1 : 0);
-            SystemProperties.set(QHDR_SYSTEM_PROPERTY, mQhdrSwitch.isChecked() ? "9" : "");
+            SystemProperties.set(QHDR_SYSTEM_PROPERTY, mQhdrSwitch.isChecked() ? "3" : "");
             return true;
         }
         if (preference == mGloveSwitch) {
