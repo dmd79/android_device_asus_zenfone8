@@ -96,7 +96,7 @@ debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 
 # enable tunnel encoding for amrwb
-tunnel.audio.encode = true
+tunnel.audio.encode=true
 
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
@@ -155,10 +155,10 @@ persist.vendor.sensors.enable.mag_filter=true
 debug.stagefright.ccodec=1
 
 #Property to set native recorder's maximum base layer fps
-ro.media.recorder-max-base-layer-fps = 60
+ro.media.recorder-max-base-layer-fps=60
 
 #Battery Property
-ro.charger.enable_suspend = 1
+ro.charger.enable_suspend=1
 
 # ASUS_BSP +++
 persist.vendor.asus.logcat.filenum=20
