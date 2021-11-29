@@ -29,7 +29,7 @@
 #define FOD_TOUCHED_OFF "0"
 
 namespace vendor {
-namespace omni {
+namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
@@ -116,5 +116,5 @@ Return<int32_t> FingerprintInscreen::getSize() {
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
-}  // namespace omni
+}  // namespace lineage
 }  // namespace vendor

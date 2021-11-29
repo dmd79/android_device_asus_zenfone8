@@ -16,9 +16,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "omni.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina",
-    vintf_fragments: ["omni.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina.xml"],
-    init_rc: ["omni.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina.rc"],
+    name: "lineage.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina",
+    vintf_fragments: ["lineage.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina.xml"],
+    init_rc: ["lineage.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     system_ext_specific: true,
     shared_libs: [
@@ -27,7 +27,7 @@ cc_binary {
         "libhidlbase",
         "liblog",
         "libutils",
-        "vendor.omni.biometrics.fingerprint.inscreen@1.0",
+        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
         "//device/asus/zenfone8:vendor.goodix.hardware.biometrics.fingerprint@2.1",
     ],
 }

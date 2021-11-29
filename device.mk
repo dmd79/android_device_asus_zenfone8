@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    omni.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina
+    lineage.biometrics.fingerprint.inscreen@1.0-service.asus_lahaina
 
 # FM
 PRODUCT_PACKAGES += \
