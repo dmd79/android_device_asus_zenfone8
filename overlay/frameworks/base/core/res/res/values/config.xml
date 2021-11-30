@@ -522,6 +522,9 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
          If no value is found for the rat-name in use, the system default will be applied.
