@@ -23,36 +23,37 @@ set -e
 DEVICE=zenfone8
 VENDOR=asus
 
-INITIAL_COPYRIGHT_YEAR=2021
-
-# Load extractutils and do some sanity checks
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+ANDROID_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/omni/build/tools/extract_utils.sh
+HELPER="$ANDROID_ROOT/tools/extract-utils/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
 fi
 . "$HELPER"
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+# Initialize the helper for common
+setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" true
 
 # Copyright headers and guards
 write_headers "zenfone8"
 
 # The standard blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
+    # Reinitialize the helper for device
+    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
+    setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" false
 
-write_makefiles "$MY_DIR"/proprietary-files-product.txt
+    # Copyright headers and guards
+    write_headers
 
-cat << EOF >> "$ANDROIDMK"
+    # The standard device blobs
+    write_makefiles "$MY_DIR"/../"$DEVICE"/proprietary-files.txt true
+    write_makefiles "$MY_DIR"/../"$DEVICE"/proprietary-files-product.txt true
 
-EOF
-
-# We are done!
-write_footers
+    # We are done!
+    write_footers
 
