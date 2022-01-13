@@ -1,4 +1,6 @@
 # ANT+
+lib/libantradio.so|d343bed6e26f99d9870f730303096f6ea8a9bcf8
+lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
 -system_ext/app/AntHalService-Soong/AntHalService-Soong.apk
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 
