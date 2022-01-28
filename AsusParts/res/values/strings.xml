@@ -94,4 +94,9 @@
     <string name="swipeup_control">Swipe up control</string>
     <string name="swipeup_title">Enable swipe up gesture</string>
     <string name="swipeup_summary">Swipe up to wake up screen</string>
+
+    <!-- Slow charger -->
+    <string name="charger_control">Charger control</string>
+    <string name="charger_title">Disable fast charger</string>
+    <string name="charger_summary">Limit PD charger to 10W</string>
 </resources>

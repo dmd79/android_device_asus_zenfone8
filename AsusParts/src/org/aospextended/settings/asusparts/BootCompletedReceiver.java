@@ -29,7 +29,7 @@ import org.aospextended.settings.asusparts.doze.DozeUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
     private static final String TAG = "AsusParts";
 
     private static final String ONE_TIME_TUNABLE_RESTORE = "hardware_tunable_restored";
@@ -47,6 +47,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         FileUtils.setValue(AsusParts.SWIPEUP_PATH, Settings.System.getInt(context.getContentResolver(),
                 AsusParts.KEY_SWIPEUP_SWITCH, 1));
         if (DEBUG) Log.d(TAG, "Swipe up switch = "+(Settings.System.getInt(context.getContentResolver(), AsusParts.KEY_SWIPEUP_SWITCH, 1)));        
+        FileUtils.setValue(AsusParts.CHARGER_PATH, Settings.System.getInt(context.getContentResolver(),
+                AsusParts.KEY_CHARGER_SWITCH, 1));
+        if (DEBUG) Log.d(TAG, "Charger switch = "+(Settings.System.getInt(context.getContentResolver(), AsusParts.KEY_CHARGER_SWITCH, 1)));
     }
 
     private boolean hasRestoredTunable(Context context) {
