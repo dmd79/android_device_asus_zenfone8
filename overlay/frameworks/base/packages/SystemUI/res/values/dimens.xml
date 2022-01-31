@@ -19,10 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">0px</dimen>
+    <dimen name="status_bar_padding_start">10px</dimen>
 
     <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">30px</dimen>
+    <dimen name="status_bar_padding_end">20px</dimen>
 
     <!-- The width/height of the unlock icon view on keyguard. -->
     <dimen name="keyguard_indication_margin_bottom">55dp</dimen>
