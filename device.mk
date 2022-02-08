@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     aptxalsOverlay \
     FrameworksResOverlay \
     FrameworksResVendor \
+    SystemUIOverlay \
     TetheringOverlay \
     WifiOverlay
 
