@@ -21,39 +21,43 @@ set -e
 DEVICE=zenfone8
 VENDOR=asus
 
-# Load extractutils and do some sanity checks
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="$CM_ROOT"/vendor/omni/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
-# Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
+KANG=
+SECTION=
 
-while [ "$1" != "" ]; do
-    case $1 in
-        -p | --path )           shift
-                                SRC=$1
-                                ;;
-        -s | --section )        shift
-                                SECTION=$1
-                                CLEAN_VENDOR=false
-                                ;;
-        -n | --no-cleanup )     CLEAN_VENDOR=false
-                                ;;
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -n | --no-cleanup )
+                CLEAN_VENDOR=false
+                ;;
+        -k | --kang )
+                KANG="--kang"
+                ;;
+        -s | --section )
+                SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        * )
+                SRC="${1}"
+                ;;
     esac
     shift
 done
 
-if [ -z "$SRC" ]; then
-    SRC=adb
+if [ -z "${SRC}" ]; then
+    SRC="adb"
 fi
 
 function blob_fixup() {
@@ -66,11 +70,12 @@ function blob_fixup() {
     esac
 }
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" false "$CLEAN_VENDOR"
+    # Reinitialize the helper for device
 
-extract "$MY_DIR"/proprietary-files-product.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/proprietary-files-vendor.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-"$MY_DIR"/setup-makefiles.sh
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    extract "${MY_DIR}/proprietary-files-product.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+
+"${MY_DIR}/setup-makefiles.sh"
