@@ -292,6 +292,9 @@ QCOM_HARDWARE_VARIANT := sm8350
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno660
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := /proc/driver/dclick
+
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
