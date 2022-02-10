@@ -23,24 +23,21 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# must be before including omni part
+# must be before including aosp part
 TARGET_BOOTANIMATION_SIZE := 1080p
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/zenfone8/device.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := zenfone8
-PRODUCT_NAME := omni_zenfone8
+PRODUCT_NAME := aosp_zenfone8
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_I006D
 PRODUCT_MANUFACTURER := asus
@@ -51,9 +48,6 @@ TARGET_DEVICE := WW_I006D
 PRODUCT_SYSTEM_DEVICE := ASUS_I006D
 PRODUCT_SYSTEM_NAME := WW_I006D
 
-OMNI_PRODUCT_PROPERTIES += \
-    ro.build.product=ZS590KS
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=ASUS_I006D \
     PRODUCT_NAME=WW_I006D \
@@ -61,6 +55,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 VENDOR_RELEASE := 12/SKQ1.210821.001/31.1004.0404.73:user/release-keys
 BUILD_FINGERPRINT := asus/WW_I006D/ASUS_I006D:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := asus/WW_I006D/ASUS_I006D:$(VENDOR_RELEASE)
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2021-11-05
