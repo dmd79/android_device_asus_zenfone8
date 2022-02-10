@@ -32,14 +32,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    vendor/omni/overlay/CarrierConfig
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
     aptxalsOverlay \
     FrameworksResOverlay \
     FrameworksResVendor \
-    TeleServiceOverlay \
     TetheringOverlay \
     WifiOverlay
 
@@ -49,7 +47,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/omnipreopt_script \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
@@ -61,7 +59,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     checkpoint_gc \
-    omnipreopt_script
+    otapreopt_script
 
 # Adreno
 PRODUCT_COPY_FILES += \
@@ -120,18 +118,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Charger images
-PRODUCT_PACKAGES += \
-    omni_charger_res_images \
-    animation.txt \
-    font_charger.png
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
-# DeviceParts
-PRODUCT_PACKAGES += \
-    DeviceParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -256,6 +244,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
     $(LOCAL_PATH)/ramdisk/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
@@ -282,7 +275,11 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    telephony-ext \
     tcmiface
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Tether offload
 PRODUCT_PACKAGES += \
@@ -340,4 +337,3 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, hardware/qcom-caf/sm8350/media/product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
-$(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
