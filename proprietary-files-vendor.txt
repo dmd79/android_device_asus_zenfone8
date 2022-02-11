@@ -5,7 +5,6 @@
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED
 vendor/app/CACertService/oat/arm64/CACertService.odex
 vendor/app/CACertService/oat/arm64/CACertService.vdex
-vendor/app/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so
 vendor/app/CneApp/oat/arm64/CneApp.odex
 vendor/app/CneApp/oat/arm64/CneApp.vdex
 vendor/app/IWlanService/oat/arm64/IWlanService.odex
@@ -1497,13 +1496,7 @@ vendor/firmware/widevine.b07
 vendor/firmware/widevine.mbn
 vendor/firmware/widevine.mdt
 vendor/firmware/wigig/wigig.ini
-vendor/firmware/wlan/qca_cld/qca6390/COUNTRY
-vendor/firmware/wlan/qca_cld/qca6390/wlan_mac.bin
-vendor/firmware/wlan/qca_cld/qca6750/COUNTRY
-vendor/firmware/wlan/qca_cld/qca6750/wlan_mac.bin
-vendor/firmware/wlan/qca_cld/wlan/COUNTRY
 vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini
-vendor/firmware/wlan/qca_cld/wlan/wlan_mac.bin
 vendor/lib/android.hardware.camera.provider@2.4-external.so
 vendor/lib/android.hardware.camera.provider@2.4-legacy.so
 vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so
@@ -1713,10 +1706,8 @@ vendor/lib/libAsusRGBSensorHAL.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libDxHdcp.so
-vendor/lib/libEGL_adreno.so
 vendor/lib/libFileMux_proprietary.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libGLESv2_adreno.so
 vendor/lib/libGPQTEEC_vendor.so
 vendor/lib/libGPTEE_vendor.so
 vendor/lib/libGPreqcancel.so
@@ -1964,7 +1955,6 @@ vendor/lib/libpwirispq.so
 vendor/lib/libpwirisservice.so
 vendor/lib/libpwirissoft.so
 vendor/lib/libpwsoftirisPCS.so
-vendor/lib/libq3dtools_adreno.so
 vendor/lib/libqc2colorconvertfilter.so
 vendor/lib/libqc2filter.so
 vendor/lib/libqc2vppfilter.so
@@ -2614,9 +2604,7 @@ vendor/lib64/libAsusBspCam_hidl.so
 vendor/lib64/libAsusRGBSensorHAL.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
-vendor/lib64/libEGL_adreno.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libGPreqcancel.so
