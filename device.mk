@@ -132,10 +132,13 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.composer@3.0.vendor \
+    vendor.qti.hardware.display.allocator@4.0.vendor \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     libion \
+    libqdMetaData.system.so \
     libtinyxml2
 
 PRODUCT_PACKAGES += \
