@@ -3,3 +3,4 @@ allow platform_app rs_exec:file { execute execute_no_trans r_file_perms };
 allow platform_app sysfs_graphics:file { getattr open read };
 
 allow platform_app vendor_camera_prop:file { getattr map open read };
+allow platform_app vendor_asus_build_prop:file { getattr map open read };
