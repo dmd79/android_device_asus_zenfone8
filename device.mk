@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     libion \
-    libtinyxml2
+    libtinyxml2 \
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 PRODUCT_PACKAGES += \
     libtinyalsa
