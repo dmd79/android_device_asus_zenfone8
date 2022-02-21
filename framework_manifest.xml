@@ -36,4 +36,14 @@
         </interface>
         <fqname>@1.0::IAsusBspCameraInterface/default</fqname>
     </hal>
+    <!-- Live Display -->
+    <hal format="hidl">
+        <name>vendor.lineage.livedisplay</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IPictureAdjustment</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
