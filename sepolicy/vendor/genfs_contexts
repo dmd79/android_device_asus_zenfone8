@@ -3,6 +3,9 @@ genfscon proc /driver/dualcam_cali                                              
 genfscon proc /driver/ois_af_state                                                              u:object_r:vendor_proc_camera:s0
 genfscon proc /driver/ois_i2c_rw                                                                u:object_r:vendor_proc_camera:s0
 
+# Charger
+genfscon sysfs /class/asuslib/chg_disable_jeita                                                 u:object_r:sysfs_battery_supply:s0
+
 # Display
 genfscon proc /globalHbm                                                                        u:object_r:vendor_proc_graphics:s0
 genfscon proc /driver/swipeup                                                                   u:object_r:vendor_proc_graphics:s0
