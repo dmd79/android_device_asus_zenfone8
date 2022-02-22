@@ -178,7 +178,6 @@ debug.stagefright.ccodec=4
 persist.sys.rogbootanimation.enable=0
 ro.additionalbutton.operation=0
 ro.ril.ecclist=112,911
-ro.hardware.fingerprint=goodixfp
 ro.telephony.default_network=26,26
 ril.subscription.types=RUIM,RUIM
 persist.vendor.radio.flexmap_type=none
