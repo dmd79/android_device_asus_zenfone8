@@ -73,6 +73,13 @@ PRODUCT_PACKAGES += \
 # Api
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# AsusParts
+PRODUCT_PACKAGES += \
+    AsusParts
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-asusparts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-asusparts.xml
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -116,8 +123,8 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Common init scripts
-PRODUCT_PACKAGES += \
-    init.qcom.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qcom.rc
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
