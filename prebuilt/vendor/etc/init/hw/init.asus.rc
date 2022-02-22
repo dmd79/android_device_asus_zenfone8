@@ -267,9 +267,6 @@ on property:vendor.asus.touch_control_aod=0
 on property:vendor.asus.touch_control_aod=1
    write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_aod_ctrl_mode 1
 
-on property:vendor.goodix.sensor.status=*
-   write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fp_auth_status ${vendor.goodix.sensor.status}
-
 on property:vendor.audio.in_call=1
    write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_phone_state 1
 on property:vendor.audio.in_call=0

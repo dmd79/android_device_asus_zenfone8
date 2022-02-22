@@ -441,7 +441,6 @@ vendor/etc/init/init.asus.storage.rc
 vendor/etc/init/init.asus.thermald.rc
 vendor/etc/init/init.asus.widevine.rc
 vendor/etc/init/init.aw8697.rc
-vendor/etc/init/init.goodixfp.rc
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/init.qti.media.rc
@@ -983,7 +982,6 @@ vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml
 vendor/etc/permissions/android.hardware.camera.front.xml
 vendor/etc/permissions/android.hardware.camera.full.xml
 vendor/etc/permissions/android.hardware.camera.raw.xml
-vendor/etc/permissions/android.hardware.fingerprint.xml
 vendor/etc/permissions/android.hardware.light.xml
 vendor/etc/permissions/android.hardware.location.gps.xml
 vendor/etc/permissions/android.hardware.nfc.hce.xml
@@ -1013,7 +1011,6 @@ vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/com.android.nfc_extras.xml
 vendor/etc/permissions/com.nxp.mifare.xml
 vendor/etc/permissions/handheld_core_hardware.xml
-vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/permissions/sku_lahaina/android.hardware.sensor.accelerometer.xml
 vendor/etc/permissions/sku_lahaina/android.hardware.sensor.compass.xml
 vendor/etc/permissions/sku_lahaina/android.hardware.sensor.gyroscope.xml
@@ -1328,24 +1325,6 @@ vendor/firmware/evass.b18
 vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
-vendor/firmware/goodixfp64.b00
-vendor/firmware/goodixfp64.b01
-vendor/firmware/goodixfp64.b02
-vendor/firmware/goodixfp64.b03
-vendor/firmware/goodixfp64.b04
-vendor/firmware/goodixfp64.b05
-vendor/firmware/goodixfp64.b06
-vendor/firmware/goodixfp64.b07
-vendor/firmware/goodixfp64.mdt
-vendor/firmware/goodixfp64_er1.b00
-vendor/firmware/goodixfp64_er1.b01
-vendor/firmware/goodixfp64_er1.b02
-vendor/firmware/goodixfp64_er1.b03
-vendor/firmware/goodixfp64_er1.b04
-vendor/firmware/goodixfp64_er1.b05
-vendor/firmware/goodixfp64_er1.b06
-vendor/firmware/goodixfp64_er1.b07
-vendor/firmware/goodixfp64_er1.mdt
 vendor/firmware/hdcpsrm.b00
 vendor/firmware/hdcpsrm.b01
 vendor/firmware/hdcpsrm.b02
@@ -2556,8 +2535,6 @@ vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/hw/fingerprint.default.so
-vendor/lib64/hw/fingerprint_er1.default.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/lights.qcom.so
 vendor/lib64/hw/local_time.default.so
@@ -3018,7 +2995,6 @@ vendor/lib64/libtinyxml.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libtzdrmgenprov.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libvndfwk_detect_jni.qti.so
