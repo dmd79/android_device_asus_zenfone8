@@ -106,11 +106,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += libbluetooth_qti
 #PRODUCT_PACKAGES += vendor.qti.hardware.bluetooth_dun-V1.0-java
 
-# Biometric
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.asus_lahaina \
-    UdfpsResources
-
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \

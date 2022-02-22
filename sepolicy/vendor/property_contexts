@@ -18,21 +18,6 @@ persist.sys.display.iris    u:object_r:vendor_display_prop:s0
 # DRM
 vendor.drm.keystatus        u:object_r:vendor_display_prop:s0
 
-# Fingerprint
-vendor.goodix.                      u:object_r:vendor_gx_fpd_prop:s0
-vendor.fp.version.driver            u:object_r:vendor_gx_fpd_prop:s0
-vendor.gf.debug.dump_data           u:object_r:vendor_gx_fpd_prop:s0
-vendor.gf.debug.whitebox.enabled    u:object_r:vendor_gx_fpd_prop:s0
-vendor.fp.cali.factory.check        u:object_r:vendor_gx_fpd_prop:s0
-vendor.fp.cali.ready                u:object_r:vendor_gx_fpd_prop:s0
-ro.hardware.fp_position             u:object_r:vendor_gx_fpd_prop:s0
-ro.hardware.fp_shape                u:object_r:vendor_gx_fpd_prop:s0
-persist.vendor.asus.fp.wakeup       u:object_r:vendor_gx_fpd_prop:s0
-vendor.fp.cali.shipping.check       u:object_r:vendor_gx_fpd_prop:s0
-vendor.screen.rotation              u:object_r:vendor_gx_fpd_prop:s0
-vendor.asus.touch_control_          u:object_r:vendor_gx_fpd_prop:s0
-
-
 # GPS
 persist.vendor.asus.agps.    u:object_r:vendor_gps_prop:s0
 persist.vendor.asus.gps.     u:object_r:vendor_gps_prop:s0
