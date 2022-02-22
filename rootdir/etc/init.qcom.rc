@@ -1,5 +1,9 @@
 on boot
 
+    # Charger Node
+    chown system vendor /sys/class/asuslib/chg_disable_jeita
+    chmod 0666 /sys/class/asuslib/chg_disable_jeita
+
     # FPS Node
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
