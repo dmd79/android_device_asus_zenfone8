@@ -544,7 +544,7 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
     if (callback != nullptr) {
         std::thread([=] {
             ALOGD("Starting on on another thread");
-            usleep(timeoutMs * 1000);
+            usleep(timeoutMs * 2000);
             ALOGD("Notifying on complete");
             if (!callback->onComplete().isOk()) {
                 ALOGE("Failed to call onComplete");
@@ -565,7 +565,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
         if (const auto it = LED_EFFECTS.find(effect); it != LED_EFFECTS.end()) {
             for (const auto &[path, value] : it->second) {
                 if (path == "SLEEP") {
-                    usleep(atoi(value.c_str()) * 1000);
+                    usleep(atoi(value.c_str()) * 2000);
                 } else {
                     ledVib.write_value(path.c_str(), value.c_str());
                 }
@@ -593,7 +593,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
     if (callback != nullptr) {
         std::thread([=] {
             ALOGD("Starting perform on another thread");
-            usleep(playLengthMs * 1000);
+            usleep(playLengthMs * 2000);
             ALOGD("Notifying perform complete");
             callback->onComplete();
         }).detach();
