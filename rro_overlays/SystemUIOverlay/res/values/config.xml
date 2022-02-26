@@ -43,7 +43,7 @@
 
     <!-- The maximum count of notifications on Keyguard. The rest will be collapsed in an overflow
      card. -->
-    <integer name="keyguard_max_notification_count">2</integer>
+    <integer name="keyguard_max_notification_count">4</integer>
 
     <!-- FPSInfoService FPS node file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
