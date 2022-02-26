@@ -61,6 +61,7 @@ namespace vibrator {
 #define test_bit(bit, array)    ((array)[(bit)/8] & (1<<((bit)%8)))
 
 static const char ACTIVATE_PATH[] = "/sys/class/leds/vibrator/activate";
+static const char INDEX_PATH[] = "/sys/class/leds/vibrator/index";
 static const char BRIGHTNESS_PATH[] = "/sys/class/leds/vibrator/brightness";
 static const char DURATION_PATH[] = "/sys/class/leds/vibrator/duration";
 static const char GAIN_PATH[] = "/sys/class/leds/vibrator/gain";
@@ -72,6 +73,7 @@ static const char LED_DEVICE[] = "/sys/class/leds/vibrator";
 
 static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EFFECTS{
     { Effect::CLICK, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "8" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0xa5" },
@@ -80,6 +82,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::DOUBLE_CLICK, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "13" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0x96" },
@@ -87,6 +90,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
         { "SLEEP", "150" },
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "13" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0x96" },
@@ -95,6 +99,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::TICK, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "6" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0xaa" },
@@ -103,6 +108,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::POP, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "11" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0x50" },
@@ -111,6 +117,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
         { BRIGHTNESS_PATH, "1" },
     }},
     { Effect::HEAVY_CLICK, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "30" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0xdc" },
@@ -123,6 +130,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
 using vibrator_constant_t = std::pair<int, std::vector<std::pair<std::string, std::string>>>;
 static std::vector<vibrator_constant_t> VIBRATOR_CONSTANTS{
     { 80, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "AUTO" },
         { SEQ_PATH, "0x00 0x01" },
         { GAIN_PATH, "AUTO" },
@@ -131,6 +139,7 @@ static std::vector<vibrator_constant_t> VIBRATOR_CONSTANTS{
         { BRIGHTNESS_PATH, "1" },
     }},
     { 90, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "AUTO" },
         { SEQ_PATH, "0x00 0x02" },
         { GAIN_PATH, "AUTO" },
@@ -139,6 +148,7 @@ static std::vector<vibrator_constant_t> VIBRATOR_CONSTANTS{
         { BRIGHTNESS_PATH, "1" },
     }},
     { 100, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "AUTO" },
         { SEQ_PATH, "0x00 0x03" },
         { GAIN_PATH, "AUTO" },
@@ -147,6 +157,7 @@ static std::vector<vibrator_constant_t> VIBRATOR_CONSTANTS{
         { BRIGHTNESS_PATH, "1" },
     }},
     {INT32_MAX, {
+        { INDEX_PATH, "1" },
         { DURATION_PATH, "AUTO" },
         { VMAX_PATH, "0x1f" },
         { GAIN_PATH, "0x80" },

@@ -1,5 +1,6 @@
 on fs
     # Haptics
+    chown system system /sys/class/leds/vibrator/index
     chown system system /sys/class/leds/vibrator/duration
     chown system system /sys/class/leds/vibrator/vmax
     chown system system /sys/class/leds/vibrator/gain
